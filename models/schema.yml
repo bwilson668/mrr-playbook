@@ -1,6 +1,6 @@
 version: 2
 
-models:
+seeds:
   - name: subscription_periods
     tests:
       # test that a customer can only have one active subscription at a time
@@ -15,7 +15,7 @@ models:
       - dbt_utils.expression_is_true:
           expression: date_trunc('month', end_date) = end_date
 
-
+models:
   - name: customer_revenue_by_month
     tests:
       - dbt_utils.unique_combination_of_columns:

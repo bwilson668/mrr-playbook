@@ -1,6 +1,6 @@
 name: acme
 
-profile: playbook
+profile: default
 
 version: '1.0'
 
@@ -19,6 +19,3 @@ clean-targets:
 
 seeds:
   quote_columns: false
-
-on-run-end:
-  "{{ grant_select_on_schemas(schemas, 'reporter') }}"
